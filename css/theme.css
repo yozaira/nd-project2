@@ -30,6 +30,7 @@ outline: none;
 -------------------------*/
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 font-weight: 300;
+margin:0;
 }
 
 .text-white {   
@@ -37,7 +38,7 @@ font-weight: 300;
 }
 
 .big-text {
-font-size: 58px;
+font-size: 33px;
 font-weight: 300;
 line-height: 62px;
 letter-spacing: 0.01em;
@@ -45,27 +46,28 @@ word-spacing: 0.15em;
 text-transform: uppercase;
 }
 
+
 .md-text {
-font-size: 24px;
+font-size: 22px;
 font-weight: 400;
 letter-spacing: 0.01em;
 word-spacing: 0.15em;
 text-transform: uppercase;
 }
 
-.section-title{
-margin-top: -20px;
-margin-bottom: 80px;
-text-align: center;
-}
 
+.section-title {
+margin-top:-20px;
+margin-bottom: 33px;
+text-align:center;
+}
 /*-----------------------
 ----- Layout Styles -----
 -------------------------*/
 
 .add-padding {
-padding-top: 120px;
-padding-bottom: 140px;
+padding-top: 60px;
+padding-bottom: 70px;
 }
 
 
@@ -205,6 +207,7 @@ width: 100%;
 /*-----------------------
 --- About Styles ----
 -------------------------*/
+
 .polaroid {
 border: 12px solid #fff;
 max-width: 75%;
@@ -212,6 +215,83 @@ box-shadow: 3px 5px 8px rgba(0,0,0,0.5);
 -webkit-transform: rotate(-5deg);
 transform: rotate(-5deg);
 }
+
+
+/*-----------------------------
+----- Services Styles ----
+------------------------------*/
+#services .service-item { 
+text-align: left; 
+padding-bottom: 20px;  
+}
+
+
+#services .service-item h3 { 
+font-size: 20px; 
+display: inline-block; 
+padding: 7px 7px; 
+}
+
+
+#services .service-item [class^="icon-"] {
+font-size: 25px;
+padding-right: 10px;
+padding-left: 5px;
+}
+
+
+#services .service-item p { 
+padding-top: 10px;  
+}
+
+
+/*--------------------------
+----- Skills Styles ----
+---------------------------*/
+.progress {
+height: 22px;
+border: 1px solid grey;
+background: #fff;
+}
+
+
+.progress-bar  { 
+border-top-right-radius: 0.5em;  
+border-bottom-right-radius: 0.5em;  
+}
+
+
+.progress .progress-bar p { 
+font-size: 14px;  
+font-weight: bold;  
+}
+
+
+.progress .progress-bar.six-sec-ease-in-out {
+-webkit-transition: width 6s ease-in-out;
+-moz-transition: width 6s ease-in-out;
+-ms-transition: width 6s ease-in-out;
+-o-transition: width 6s ease-in-out;
+transition: width 6s ease-in-out;
+}  
+
+
+#skills .container {  
+padding-left: 0px; 
+}
+
+
+#skills .skill-details {  
+margin-bottom: 30px; 
+}
+
+
+#skills .skill-details h3 { 
+font-size: 20px;  
+margin-bottom: 10px; 
+}
+
+
 
 /*-----------------------
 --- Portfolio Styles ----
@@ -278,4 +358,387 @@ background: #509B9E
 }
 
 
+#copy-rights {
+font-size: 13px;
+}
 
+
+
+/*-------------------------------
+---- Media Queries ----
+--------------------------------*/
+
+/* NOTES:
+Content (Not Device Width) Determines Breakpoints
+These media queries based the breakpoints on the natural qualities of the content – essentially paying attention to when each element “wants” to be restyled. 
+
+As the screen size increases, I simply pick a point at which the content itself would look better in a new formation, and that’s the breakpoint.
+I started working on small screens first, and continue adjustng until desktop size.
+*/
+
+
+/* small screens */
+@media only screen and (min-width: 200px)  and (max-width: 320px) { 
+
+  /* #main-nav { background: pink;  } */
+  #main-nav .navbar-brand span { 
+  font-size: 18px;  
+  } 
+
+
+  #main-nav .navbar-header { 
+  margin-right: 0;
+  } 
+
+
+  #home .intro {  
+  margin-top: 100px;  
+  }
+
+
+  #home .intro h1 { 
+  font-size: 15px; 
+  width: 100%; 
+  margin-top: 5px;
+  }
+
+  #home .intro h3 { 
+  font-size: 10px;
+  margin-top: 5px;
+  }
+
+  #services .service-item h3 {
+  font-size: 14px;
+  }
+
+  #services .service-item [class^="icon-"] {
+  font-size: 20px; 
+  }
+
+
+  #portfolio .container { 
+  padding-left: 0; /*  this bootstrap property needs to be adjust just on this screen size */
+  }  
+
+
+  .portfolio-item { 
+  margin-left: 15px;
+  }
+
+
+  .skill { 
+  padding-left: 35px; 
+  }   
+
+
+  .big-text { 
+  font-size: 30px; 
+  }
+
+
+  .md-text {
+  font-size: 18px;
+  }
+
+
+}
+
+
+@media only screen and (min-width: 321px)  and (max-width: 480px) {  /*  default  style -  portrait viewport 320 x 480*/
+ 
+  /* #main-nav{ background: green;  } */
+  #home .intro {
+  margin-top: 90px;
+  }
+
+
+  .skill {
+  padding-left: 35px;
+  }   
+
+}
+
+
+  @media only screen and (min-width: 481px) and (max-width: 620px) { 
+
+  /* #main-nav{ background: blue;  } */
+  #home .intro {
+  margin-top: 110px;
+  }
+
+
+  #home .intro h1 {
+  font-size: 20px;
+  }
+
+
+  #home .intro h3 { 
+  font-size: 15px; 
+  margin-top: 20px;
+  }
+
+
+  #portfolio .container { 
+  padding-left: 0;
+
+  }  /*  this bootstrap property needs to be adjust just on this screen size */
+
+
+  .portfolio-item { 
+  margin-left: 15px; 
+  }
+
+
+  .skill{ 
+  padding-left: 35px; 
+  }   
+
+}
+
+
+
+/* tablets and desktop */
+@media only screen and (min-width: 621px) and (max-width: 767px) {  
+  
+  /* #main-nav{ background: pink;  } */
+  #home .intro {  
+  margin-top: 125px;  
+  }
+
+
+  #home .intro h1 { 
+  font-size: 24px; 
+  }
+
+
+  #home .intro h3 {
+  font-size: 20px; 
+  margin-top: 25px; 
+  }
+
+
+  .big-text { 
+  font-size: 58px; 
+  }
+
+
+  .md-text { 
+  font-size: 37px; 
+  }
+
+
+  #services .service-item [class^="icon-"] { 
+  font-size: 25px;  
+  }
+
+
+  .skill { 
+  padding-left: 35px; 
+  }   
+
+
+  .portfolio-item {
+  margin-left: 15px; 
+  }
+
+
+  .portfolio-item h3 { 
+  font-size: 24px;  
+  }
+
+}
+
+
+@media only screen and  (min-width: 768px) and (max-width: 960px) { 
+
+  /* #main-nav{ background: yellow;  } */
+
+  #main-nav .navbar-brand {  
+  margin-left: -5px;      /* just needed adjust here */
+  } 
+
+
+  #home .intro {
+  margin-top: 145px;  
+  }
+
+
+  #home .intro h1 {
+  font-size: 32px;
+  }
+
+
+  #home .intro h3 {
+  font-size: 22px; margin-top:25px;
+  }
+
+
+  .big-text { 
+  font-size: 58px; 
+  }
+
+
+  .md-text { 
+  font-size: 37px; 
+  }
+
+
+  .add-padding {  
+  padding-top: 120px;   
+  padding-bottom: 140px; 
+  }
+
+
+  .polaroid {
+  border: 12px solid #fff;
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto 35px;
+  box-shadow: 3px 5px 8px rgba(0,0,0,0.5);
+  -webkit-transform: rotate(-5deg);
+  transform: rotate(-5deg); 
+  }
+
+
+  .portfolio-item h3 { 
+  font-size: 24px;  
+  }
+
+
+  /* .social-links*/
+  .social-links li a { 
+  font-size: 22px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  }
+
+
+  #copy-rights {
+  font-size: 16px;
+  }
+
+
+}
+
+
+
+@media only screen and  (min-width: 961px) and (max-width: 1200px) { 
+
+  /* #main-nav{ background: cyan;  } */
+
+  #home .intro {  
+  margin-top: 165px;  
+  }
+
+
+  #home .intro h1 { 
+  font-size: 40px;    
+  }
+
+
+  #home .intro h3 { 
+  font-size: 28px; 
+  margin-top: 35px;   
+  }
+
+
+  .big-text { 
+  font-size: 58px; 
+  }
+
+
+  .md-text { 
+  font-size: 37px; 
+  }
+
+
+  .add-padding {  
+  padding-top: 120px;   
+  padding-bottom: 140px; 
+  }
+
+
+  #services .service-item [class^="icon-"] { 
+  font-size: 35px;  
+  }
+
+
+  .portfolio-item h3 { 
+  font-size: 24px;  
+  }
+
+
+  /* .social-links*/
+  .social-links li a { 
+  font-size: 22px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  }
+
+
+  #copy-rights {
+  font-size: 16px;
+  }
+
+}
+
+
+
+@media only screen and  (min-width: 1201px)  { 
+
+  #home .intro {  
+  margin-top: 265px;  
+  }
+
+
+  #home .intro h1 {
+  font-size: 48px;    
+  }
+
+
+  #home .intro h3 {
+  font-size: 28px;
+  margin-top: 35px;  
+  }
+
+
+  .big-text {
+  font-size: 58px; 
+  }
+
+
+  .md-text {
+  font-size: 37px; 
+  }
+
+
+  .add-padding {
+  padding-top: 120px;
+  padding-bottom: 140px;
+  }
+
+
+  .portfolio-item h3 {
+  font-size: 24px;  
+  }
+
+
+  /* .social-links*/
+  .social-links li a { 
+  font-size: 22px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  }
+
+
+  #copy-rights {
+  font-size: 16px;
+  }
+
+}

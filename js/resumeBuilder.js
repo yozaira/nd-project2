@@ -278,7 +278,7 @@ services.display = function (services_obj) {
     }
   }
 }
-services.display (services);
+
 
 
 
@@ -330,7 +330,7 @@ bio.displayInfo = function (bio_object) {
    }
 
 }
-bio.displayInfo(bio);
+
 
 
 
@@ -480,7 +480,7 @@ Method to display projects
     }  
   }
 }
-projects.display(projects);
+
 
 
 
@@ -505,7 +505,7 @@ bio.displaySocialLinks = function(bio_object) {
 
   linksContainer.innerHTML = output;
 }
-bio.displaySocialLinks(bio);
+
 
 
 

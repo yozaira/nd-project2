@@ -199,50 +199,54 @@ services.display = function (services_obj) {
       serviceItemStart.appendChild(serviceItem);
 
       // add a specific color and icon to each title
-      if (this.service[key].title === 'Backend Development' ) {
+
+      if (this.service.indexOf(this.service[key]) === 0 ) {
+
         serviceItemDiv.className = 'bg-peach';
         serviceIcon.className = "icon-code";
-
+        
         serviceItem.appendChild(serviceItemDiv);  
         serviceItemDiv.appendChild(serviceIcon);      
         serviceItemDiv.appendChild(serviceTitle);
         serviceItem.appendChild(serviceDescription);
       }
-      else if (this.service[key].title === 'Web Design') {
+       else if (this.service.indexOf(this.service[key]) === 1 ) {
+
         serviceItemDiv.className = 'bg-teal';
         serviceIcon.className = "icon-edit";
-
+        
         serviceItem.appendChild(serviceItemDiv);  
         serviceItemDiv.appendChild(serviceIcon);      
         serviceItemDiv.appendChild(serviceTitle);
         serviceItem.appendChild(serviceDescription);
       }
-      else if (this.service[key].title === 'Digital Marketing') {
+        else if (this.service.indexOf(this.service[key]) === 2 ) {
+
         serviceItemDiv.className = 'bg-cobalt-blue';
         serviceIcon.className = "icon-edit";
-
+        
         serviceItem.appendChild(serviceItemDiv);  
         serviceItemDiv.appendChild(serviceIcon);      
         serviceItemDiv.appendChild(serviceTitle);
         serviceItem.appendChild(serviceDescription);
       }
-     else if (this.service[key].title === 'Frontend Development') {
-        serviceItemDiv.className = 'bg-teal';
-        serviceIcon.className = "icon-laptop";
+        else if (this.service.indexOf(this.service[key]) === 3 ) {
 
+        serviceItemDiv.className = 'bg-peach';
+        serviceIcon.className = "icon-laptop";
+        
         serviceItem.appendChild(serviceItemDiv);  
         serviceItemDiv.appendChild(serviceIcon);      
         serviceItemDiv.appendChild(serviceTitle);
         serviceItem.appendChild(serviceDescription);
       }
       else {
-        serviceItemDiv.className = 'aternative-class';
+          serviceItemDiv.className = 'aternative-class';
         serviceItem.appendChild(serviceItemDiv);  
         serviceItemDiv.appendChild(serviceIcon);      
         serviceItemDiv.appendChild(serviceTitle);
         serviceItem.appendChild(serviceDescription);
       }
-
 
       /*
 

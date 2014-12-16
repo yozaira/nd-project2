@@ -201,3 +201,81 @@ margin-top: 70px;
 width: 100%;
 }
 
+
+/*-----------------------
+--- About Styles ----
+-------------------------*/
+.polaroid {
+border: 12px solid #fff;
+max-width: 75%;
+box-shadow: 3px 5px 8px rgba(0,0,0,0.5);
+-webkit-transform: rotate(-5deg);
+transform: rotate(-5deg);
+}
+
+/*-----------------------
+--- Portfolio Styles ----
+-------------------------*/
+
+#portfolio {
+padding-top: 70px;
+background: #1F2C37;
+color:#fff;
+/* background:url('../images/bg-portfolio.jpg') no-repeat fixed;
+background-size:cover; */
+}
+
+
+/*----------------------
+----- Footer Styles ----
+------------------------*/
+
+#main-footer {
+padding-top: 50px;
+padding-bottom: 40px;
+background: #1f2c37;
+}
+
+
+/* social links  */
+.social-links {
+list-style: none;
+margin: 0;
+padding: 0;
+margin-bottom: 30px;
+}
+
+
+.social-links li {
+display: inline-block;
+margin: 0 5px;
+border-radius: 3px;
+box-shadow: 0 4px 0 transparent;
+-webkit-transition: all .3s ease-out;
+transition: all .3s ease-out;
+}
+
+
+.social-links li a {
+display: block;
+color: #fff;
+color: rgba(255,255,255,0.3);
+font-size: 21px;
+width: 50px;
+height: 50px;
+line-height: 50px;
+text-align: center;
+background: rgba(0,0,0,0.2);
+border-radius: 50%;
+-webkit-transition: all .3s ease-out;
+transition: all .3s ease-out;
+}
+
+
+.social-links li a:hover {
+color: #fff;
+background: #509B9E
+}
+
+
+

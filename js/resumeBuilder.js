@@ -82,7 +82,69 @@ var projects = {
 };
 
  
- 
+ // function literal 
+projects.display = function (project_obj){
+
+    if(project_obj.projects.length > 0) {	
+	
+		for (var key in project_obj.projects) {
+
+			 var formattedTitle = HTMLprojectTitle.replace("%data%", project_obj.projects[key].title);
+			 var formattedDates = HTMLprojectDates.replace("%data%", project_obj.projects[key].date);
+			 var formattedDescription = HTMLprojectDescription.replace("%data%", project_obj.projects[key].description);
+					
+			 $('#projects').append( HTMLprojectStart );
+			 // $('#projects').append( formattedTitle );
+			 // $('#projects').append( formattedDates );
+			 // $('#projects').append( formattedDescription );
+			
+			 $('.project-entry:last').append( formattedTitle );
+			 $('.project-entry:last').append( formattedDates);
+			 $('.project-entry:last').append(formattedDescription );
+			
+			if (project_obj.projects[key].images.length > 0) {
+			   for (image in project_obj.projects[key].images) {
+				var formattedImage = HTMLprojectImage.replace("%data%", project_obj.projects[key].images[ image]);
+				$('.project-entry:last').append( formattedImage);
+				}	   
+			}	
+		}	
+	}
+	
+}
+projects.display (projects);
+
+
+// function declaration
+function displayProjects (){
+    
+	for (var key in projects.projects) {
+
+         var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[key].title);
+         var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[key].date);
+         var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[key].description);
+        	    
+		 $('#projects').append( HTMLprojectStart );
+		 // $('#projects').append( formattedTitle );
+		 // $('#projects').append( formattedDates );
+		 // $('#projects').append( formattedDescription );
+		
+		 $('.project-entry:last').append( formattedTitle );
+		 $('.project-entry:last').append( formattedDates);
+		 $('.project-entry:last').append(formattedDescription );
+		
+		if (projects.projects[key].images.length > 0) {
+		   for (image in projects.projects[key].images) {
+		    var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[key].images[ image]);
+			$('.project-entry:last').append( formattedImage);
+		   }
+		   
+		}	
+	
+	}
+	
+}
+displayProjects();
 
 
 

@@ -1,95 +1,173 @@
 <!DOCTYPE html>
+<html>
+  <head>
+    <!-- ==============================================
+    Title and Meta Tags
+    =============================================== -->
+    <meta charset="utf-8">
+    <title>Yozie Rojas Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- ==============================================
+    CSS
+    =============================================== -->    
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" id="main" href="css/font-awesome.css">
+    <!-- ==============================================
+    Fonts
+    =============================================== -->
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,200,500,600,700' rel='stylesheet' type='text/css'>
+    <!-- ==============================================     
+    JS
+    =============================================== -->
+    <script src="js/jquery.js"></script>
+    <!--  helper.js  -->
+    <script src="js/helper.js"></script>
+    <!--Uncomment the <script> tag below when you're ready to add an interactive Google Map to your resume!-->
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script> 
 
-<head>
-  <link href="css/style.css" rel="stylesheet" type="text/css"></link>
-  <script src="js/jquery.js"></script>
-  <!--  helper.js  -->
-  <script src="js/helper.js"></script>
- <!--Uncomment the <script> tag below when you're ready to add an interactive Google Map to your resume!-->
-  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script> 
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->  
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->    
+  </head>
+  <body>
+    <div class="wrapper">
+    <!-- ==============================================
+    MAIN NAV
+    =============================================== -->
+      <div id="main-nav" class="navbar navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">     
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#site-nav">
+              <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+            </button>       
+            <!-- ======= LOGO ========-->
+            <div class="navbar-brand">
+              <span>Yozie Rojas</span>           
+            </div>
 
-  <meta name="viewport" content="width=device-width">
-</head>
+            <div id="site-nav" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav navbar-right">
+                <li class="sr-only"><a href="#home" class="scrollto">Home</a></li>
+                <li><a href="#services" class="scrollto">What I Do</a></li>
+                <li><a href="#about" class="scrollto">About Me</a></li>
+                <li><a href="#portfolio" class="scrollto">My Works</a></li>
+                <li><a href="#contact" class="scrollto">Contact Me</a></li>
+              </ul>
+            </div><!-- #end navbar-collapse -->     
+          </div><!--#end nav-header -->   
+        </div><!--#end nav container -->
+      </div><!--#end navbar-fixed-top -->
 
-<body unresolved>
+      <!-- ==============================================
+      HEADER
+      =============================================== -->
+      <header id="home">   
+        <div class="row">
+          <div class="container-fluid">
+            <div class="intro col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 text-center">  
+              <h1>Yozie Rojas</h1>
+              <h3>Front-end Developer</h3>       
+            </div>    
+            <!--# heaer bg image -->
+          </div>
+        </div>
+      </header><!--# end header -->
 
-  <div id="main">
+      <div class="clearfix"></div>
 
-    <div id="header" class="center-content">
-      <ul id="topContacts" class='flex-box'></ul>
-    </div>
-	
-    <div style='clear: both;'></div>
-	
-    <div id="workExperience" class='gray'>
-      <h2>Work Experience</h2>
-    </div>
-	
-    <div id="projects">
-      <h2>Projects</h2>
-    </div>
-	
-    <div id="education" class='gray'>
-      <h2>Education</h2>
-    </div>
-	
-    <div id="skillsChart">
-      <h2>Skills Chart</h2>
-    </div>
-	
-    <div id="mapDiv">
-      <h2>Where I've Lived and Worked</h2>
-    </div>
-	
-    <div id="letsConnect" class='dark-gray'>
-      <h2 class='orange center-text'>Let's Connect</h2>
-      <ul id="footerContacts" class="flex-box">
-	  
-      </ul>
-    </div>
-  </div>
+      <!-- ==============================================
+      SERVICES
+      =============================================== -->
+      <section id="services" class="add-padding"> 
+        <div class="container">
+          <h1 class="section-title">My Services</h1>    
+          <div class="row">     
+            <!-- services content -->
+          </div>      
+        </div>    
+      </section>
 
-  <!--
-  The next line tells the browser where to download the JavaScript file you'll be
-  writing. In resumeBuilder.js, you'll be writing code that builds the resume
-  dynamically when this website, index.html, is opened.
-  -->
-  <script src="js/resumeBuilder.js"></script>
-  
-  <script type="text/javascript">
+      <!-- ==============================================
+      ABOUT
+      =============================================== -->
+      <section id="about" class="add-padding bg-peach">
+        <div class="container">     
+          <div class="row">   
+          <!-- about content -->
+          </div>        
+        </div>      
+      </section>
 
-   //displayProjects ();
-   // projects.display ();
+      <!-- ==============================================
+      SKILLS
+      =============================================== -->
+      <section id="skills" class="add-padding"> 
+        <div class="container">     
+          <h1 class="section-title big-text">My Skills</h1>   
+          <div class="row">     
+          <!-- skills content -->
+          </div>      
+        </div>    
+      </section>
 
-   /*
-  if(document.getElementsByClassName("flex-item").length === 0) {
-    document.getElementById("topContacts").style.display = "visible";
-  }
-  if(document.getElementsByTagName("h1").length === 0) {
-    document.getElementById("header").style.display = "visible";
-  }
-  if(document.getElementsByClassName("work-entry").length === 0) {
-    document.getElementById("workExperience").style.display = "visible";
-  }
+      <!-- ==============================================
+      PORTFOLIO
+      =============================================== -->
+      <section id="portfolio" class="add-padding">         
+        <div class="container">
+          <h1 class="section-title big-text">My Works</h1>
+          <div class="row">
+            <!-- portfolio content -->
+          </div>
+        </div>
+      </section>
 
-  if(document.getElementsByClassName("project-entry").length === 0) {
-    document.getElementById("projects").style.display = "visible";
-  }
-  if(document.getElementsByClassName("education-entry").length === 0) {
-    document.getElementById("education").style.display = "visible";
-  }
-  
-  if(document.getElementsByClassName("skills-entry").length === 0) {
-    document.getElementById("skillsChart").style.display = "visible";
-  }
-  
-  if(document.getElementsByClassName("flex-item").length === 0) {
-    document.getElementById("letsConnect").style.display = "visible";
-  }
-  if(document.getElementById("map") == undefined) {
-    document.getElementById("mapDiv").style.display = "visible";
-  }
+      <!-- ==============================================
+      CONTACT
+      =============================================== -->
+      <section id="contact" class="add-padding">  
+        <div class="container">     
+          <div class="row">   
+          <!-- contact form -->
+          </div>        
+        </div>    
+      </section>
+      <!-- ==============================================
+      MAP
+      =============================================== -->
+      <div id="mapDiv">
+        <h2 class="text-center">Where I've Lived and Worked</h2>
+        <!-- places Ive lived and worked map -->
+        <div id="map"></div> 
+      </div>
 
-*/
-  </script>
-</body>
+      <!-- ==============================================
+      FOOTER
+      =============================================== -->   
+      <footer id="main-footer" class="add-padding bg-cobalt-blue peach-border-top"> 
+        <div class="container"> 
+          <div class="row">
+            <!-- social links -->
+          </div>
+
+          <div id="copy-rights">
+          <!-- copy rights -->
+          </div>
+        </div>
+      </footer>   
+
+    </div><!-- #end wrapper -->
+
+    <!--The next line tells the browser where to download the JavaScript file you'll be
+    writing. In resumeBuilder.js, you'll be writing code that builds the resume
+    dynamically when this website, index.html, is opened.--> 
+    <script src="js/resumeBuilder.js"></script>
+
+    <script type="text/javascript"> 
+
+    </script>
+  </body>
+</html>

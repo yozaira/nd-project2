@@ -435,3 +435,84 @@ skills.display = function (skills_object) {
 } 
 skills.display(skills); 
 
+
+
+/*
+Method to display projects
+*/
+  projects.display = function (projects_obj) {  
+
+  if(projects_obj.project.length > 0) { 
+
+      for (var key in projects_obj.project) { 
+      // console.log (this.project[key].images) ;
+
+      // div that will contain service info
+      var projectItemStart = document.querySelector('#portfolio .row');
+      // create columns using bootstrap grid system 
+      var projectItem = document.createElement('div');
+
+      //projectItem.className += 'col-xs-6';
+      projectItem.className += ' col-sm-6';
+      projectItem.className += ' col-md-6';
+      projectItem.className += ' col-lg-4';
+      projectItem.className += ' portfolio-item';
+
+      // create image 
+      var projectPic = document.createElement('img');
+      projectPic.className = "img-responsive";
+      for (image in this.project[key].images) {
+        projectPic.src = this.project[key].images[image];
+      }
+
+      // create title and description elements
+      var  projectTitle = document.createElement('h3');
+      var  projectDescription = document.createElement('p');
+      // add service info 
+      projectTitle.innerHTML = this. project[key].title;
+      projectDescription.innerHTML =  this.project[key].description;
+
+      // append elements to service section     
+      projectItemStart.appendChild(projectItem);
+      projectItem.appendChild(projectPic);
+      projectItem.appendChild(projectTitle);
+      projectItem.appendChild(projectDescription);
+    }  
+  }
+}
+projects.display(projects);
+
+
+
+
+/*
+Method to display social links
+*/
+bio.displaySocialLinks = function(bio_object) {
+
+  // var link = document.querySelector('#main-footer a') ;
+  // link.href = 'www.mynewsite.com'; 
+  // console.log(link);
+
+  for (var key in this.socialLinks ) {
+    //console.log(key);
+    // console.log(this.socialLinks[key]) 
+
+    var linksContainer = document.querySelector ('#main-footer .container');
+    var ul = document.createElement('ul');
+    ul.className   = 'social-links';
+    ul.className += ' text-center';
+    var li = document.createElement('li');
+    var a = document.createElement('a');
+    var icon = document.createElement('i');
+    icon.className += 'icon-'+ key ;
+    a.href = this.socialLinks[key] ;
+
+    linksContainer.appendChild(ul);
+    ul.appendChild(li);
+    li.appendChild(a);
+    a.appendChild(icon);
+  }
+}
+bio.displaySocialLinks(bio);
+

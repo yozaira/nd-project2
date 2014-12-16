@@ -484,7 +484,6 @@ projects.display(projects);
 
 
 
-
 /*
 Method to display social links
 */
@@ -494,25 +493,32 @@ bio.displaySocialLinks = function(bio_object) {
   // link.href = 'www.mynewsite.com'; 
   // console.log(link);
 
+  var linksContainer = document.querySelector ('#main-footer .row');
+  var  output = '<ul class="social-links text-center">';
+
   for (var key in this.socialLinks ) {
     //console.log(key);
     // console.log(this.socialLinks[key]) 
-
-    var linksContainer = document.querySelector ('#main-footer .container');
-    var ul = document.createElement('ul');
-    ul.className   = 'social-links';
-    ul.className += ' text-center';
-    var li = document.createElement('li');
-    var a = document.createElement('a');
-    var icon = document.createElement('i');
-    icon.className += 'icon-'+ key ;
-    a.href = this.socialLinks[key] ;
-
-    linksContainer.appendChild(ul);
-    ul.appendChild(li);
-    li.appendChild(a);
-    a.appendChild(icon);
+    output += '<li><a href="' + this.socialLinks[key] +'"><i class="icon-'+key+' "></i></a></li>';
   }
+  output += '</ul>';
+
+  linksContainer.innerHTML = output;
 }
 bio.displaySocialLinks(bio);
 
+
+
+/*
+Method to display Copy Rights Info
+*/
+bio.displayCopyRights = function (bio_object) {
+
+  var date = new Date();
+  var year = date.getFullYear();
+  var copyRightContainer = document.querySelector ('#main-footer #copy-rights');
+  var  output = '<p class="text-center">&copy; ' + year + '- All rights reserved</p>';
+  output  += '<p class="text-center"><a href="'+this.contacts.website+'">'+this.name+ '</a></p> ';
+
+  copyRightContainer.innerHTML = output;
+}

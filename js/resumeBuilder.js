@@ -1,87 +1,171 @@
-
 var bio = {
-    "name": "Yozaira Rojas",
-    "role": "Web Developer",
-    "contacts": {
-        "mobile": "650-555-5555",
-        "email": "yozaira@exampte.com",
-        "github": "www.github.com",
-        "twitter": "www.twitter.com",
-        "location": "Atlanta, GA"
-         } ,
-    "welcome4essage": "torem ipsun dolor sit anet etc etc etc.torem ipsun dolor sit anet etc etc etc torem ipsun dolor sit anet etc etc etc",
-    "skills": [
-        "awesomeness",
-        "delivering things",
-        "saving the universe"
-    ] ,
-    "projects": [
-        "project1",
-        "project2",
-        "project3",
-        "project4"
-    ],
-    "bioPic": "inages/fry.Jpg"
+	"name": "Yozie Rojas",
+	"role": "Web Developer",
+	"pic":  "images/aboutPic.png",
+	"contacts": {
+	     "location": "Atlanta, GA",
+	     "mobile":   "650-555-5555",
+	     "email":    "yozaira@exampte.com",
+	     "website":  "http://yoziesite.com"	 
+	} ,
+	"socialLinks": {
+	     "github":      "http://github.com" ,
+	     "twitter":     "http://twitter.com",
+	     "google-plus": "http://googleplus.com"  
+	 } ,
+	"aboutMeLeadPara": "I am Yozie Rojas, do pancetta swine hamburger incididunt in excepteur irure pig labore est venison dolor ex adipisicing. Labore capicola veniam.",
+	"aboutMeNextPara":  "<p>Bacon ipsum dolor sit amet shoulder drumstick spare ribs shank, magna in sirloin. Turducken dolore tempor irure tenderloin pork belly shankle"
+                       + "Excepteur in strip steak pork chop voluptate tongue, hamburger nostrud kevin enim nulla ut cow incididunt. commodo corned beef ut non rump swine pork chop exercitation ball tip ham deserunt<\/p>"
+};
+
+var services = {
+   "service" : [ 
+		{
+		"title": "Backend Development",
+		"description":  "torem ipsun dolor sit '<b>dolor sit amet<\/b>', etc.torem ipsun dolor sit anet etc etc etc torem ipsun dolor sit anet etc etc etc" 
+		               + "torem ipsun dolor sit '<b>dolor sit amet<\/b>', etc.torem ipsun dolor sit anet etc etc etc torem ipsun dolor sit anet etc etc etc"
+		}, {
+		"title": "Web Design",
+		"description": "torem ipsun dolor sit '<a href='#'>dolor sit amet<\/a>', etc.torem ipsun dolor sit anet etc etc etc torem ipsun dolor sit anet etc etc etc" 
+		               "torem ipsun dolor sit '<b>dolor sit amet<\/b>', etc.torem ipsun dolor sit anet etc etc etc torem ipsun dolor sit anet etc etc etc"
+		}, {
+		"title": "Frontend Development",
+		"description":  "torem ipsun dolor sit anet etc etc etc.torem ipsun dolor sit anet etc etc etc torem ipsun dolor sit anet etc etc etc"
+		}, {
+		"title": "Digital Marketing",
+		"description":  "torem ipsun dolor sit anet etc etc etc.torem ipsun dolor sit anet etc etc etc torem ipsun dolor sit anet etc etc etc"
+		}
+	]
 };
 
 
-var services = {
-       "service" : [ 
-			{
-			"title": "Backend Development",
-			"description":  "torem ipsun dolor sit anet etc etc etc.torem ipsun dolor sit anet etc etc etc torem ipsun dolor sit anet etc etc etc",
-			}, {
-			"title": "Web Design",
-			"description":  "torem ipsun dolor sit anet etc etc etc.torem ipsun dolor sit anet etc etc etc torem ipsun dolor sit anet etc etc etc",
-			}, {
-			"title": "Frontend Development",
-			"description":  "torem ipsun dolor sit anet etc etc etc.torem ipsun dolor sit anet etc etc etc torem ipsun dolor sit anet etc etc etc",
-			}, {
-			"title": "Digital Marketing",
-			"description":  "torem ipsun dolor sit anet etc etc etc.torem ipsun dolor sit anet etc etc etc torem ipsun dolor sit anet etc etc etc"
-			}
-		]
+
+var skills = {
+   "skill" : [ 
+		{
+		"title": "PHP Programming",
+		"proficiencyLevel": "70",
+		"description": "torem ipsun dolor sit '<b>dolor sit amet<\/b>', etc.torem ipsun dolor sit anet etc etc etc torem ipsun dolor sit anet etc etc etc" 
+		}, {
+		"title": "MySQL Database",
+		"proficiencyLevel": "70",
+		"description": "torem ipsun dolor sit '<a href='#'>dolor sit amet<\/a>', etc.torem ipsun dolor sit anet etc etc etc torem ipsun dolor sit anet etc etc etc"      
+		}, {			
+		"title": "HTML-CSS",
+		"proficiencyLevel": "80",
+		"description":  "torem ipsun dolor sit anet etc etc etc.torem ipsun dolor sit anet etc etc etc torem ipsun dolor sit anet etc etc etc"
+		}, {
+		"title": "JavaScript",
+		"proficiencyLevel": "60",
+		"description":  "torem ipsun dolor sit anet etc etc etc.torem ipsun dolor sit anet etc etc etc torem ipsun dolor sit anet etc etc etc"
+		}, {
+		"title": "Git Version Control",
+		"proficiencyLevel": "60",
+		"description":  "torem ipsun dolor sit anet etc etc etc.torem ipsun dolor sit anet etc etc etc torem ipsun dolor sit anet etc etc etc"
+		}, {
+		"title": "Google Map API",
+		"proficiencyLevel": "60",
+		"description":  "torem ipsun dolor sit anet etc etc etc.torem ipsun dolor sit anet etc etc etc torem ipsun dolor sit anet etc etc etc"
+		}
+	]
+};
+
+
+var projects = {
+    "project": [
+        {
+            "title": "MongoDB CMS",
+            "date": "2013",
+            "description": "Lorem ipsum dolor sit amet, consectetaur adipisicing elit, sed do eiusmod tempor incididunt ut labore ",
+            "githubLink": "http://github.com",
+            "images": [
+                "http://placehold.it/555x300",
+                "http://placehold.it/555x300",
+                "http://placehold.it/555x300"
+             ] 
+        } , {
+            "title": "PHP-HTML Photo Gallery",
+            "date": "2013",
+            "description": "Lorem ipsum dolor sit amet, consectetaur adipisicing elit, sed do eiusmod tempor incididunt ut labore datat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+			"githubLink": "http://github.com",
+			"images": [
+                "http://placehold.it/555x300",
+                "http://placehold.it/555x300",
+                "http://placehold.it/555x300"
+             ] 
+        }, {
+            "title": "SMS Phone App",
+            "date": "2013",
+            "description": "Lorem ipsum dolor sit amet, consectetaur adipisicing elit, sed do eiusmod tempor incididunt ut labore datat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+			"githubLink": "http://github.com",
+			"images": [
+                "http://placehold.it/555x300",
+                "http://placehold.it/555x300",
+                "http://placehold.it/555x300"
+             ] 
+        }, {
+            "title": "Responsive Professional Theme",
+            "date": "2013",
+            "description": "Lorem ipsum dolor sit amet, consectetaur adipisicing elit, sed do eiusmod tempor incididunt ut labore datat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+			"githubLink": "http://github.com",
+			"images": [
+                "http://placehold.it/555x300",
+                "http://placehold.it/555x300",
+                "http://placehold.it/555x300"
+             ] 
+        }, {
+            "title": "Google Map Business App",
+            "date": "2013",
+            "description": "Lorem ipsum dolor sit amet, consectetaur adipisicing elit, sed do eiusmod tempor incididunt ut labore datat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+			"githubLink": "http://github.com",
+			"images": [
+                "http://placehold.it/555x300",
+                "http://placehold.it/555x300",
+                "http://placehold.it/555x300"
+             ] 
+        }, {
+            "title": "Google Map Business App",
+            "date": "2013",
+            "description": "Lorem ipsum dolor sit amet, consectetaur adipisicing elit, sed do eiusmod tempor incididunt ut labore datat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+			"githubLink": "http://github.com",
+			"images": [
+                "http://placehold.it/555x300",
+                "http://placehold.it/555x300",
+                "http://placehold.it/555x300"
+             ] 
+        }
+    ]
 };
 
 
 var work = {
 
     "jobs": [
-        {
-            "employer": "Employer1",
-            "title": "Administrative Assistant",
-            "dates": "April 2005- November 2008",
+	     {
+            "employer": "Freelance",
+            "title": "Web Developer",
+            "dates": "Jan 2012- Present",
+            "city": "Washington, DC",
             "description": "Lorem ipsum dolor sit amet, consectetaur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo ."
-        } , {
-            "employer": "Employer2",
-            "title": "Communication and PR Assistant",
-            "dates": "August 2010 - January 2011",
-            "description": "Lorem ipsum dolor sit amet, consectetaur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo ."
-        }
-    ]
-};
-
-
-var projects = {
-    "projects": [
-        {
-            "title": "CMS",
-            "date": "2013",
-            "description": "Lorem ipsum dolor sit amet, consectetaur adipisicing elit, sed do eiusmod tempor incididunt ut labore ",
-            "images": [
-                "images1",
-                "images2",
-                "images3"
-             ] 
         } ,  {
-            "title": "WP Theme",
-            "date": "2013",
-            "description": "Lorem ipsum dolor sit amet, consectetaur adipisicing elit, sed do eiusmod tempor incididunt ut labore datat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            "employer": "USAID Child Health Integrated Program (MCHIP)",
+            "title": "Communication & Social Media Assistant",
+            "dates": "Jan 2010- November 2011",
+			 "city": "Atlanta, GA",
+            "description": "Lorem ipsum dolor sit amet, consectetaur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo ."
+        } ,  {
+            "employer": "Administrative Assistant",
+            "title": "Communication and PR Assistant",
+            "dates": "Feb 2008 - Dic 2009",
+			 "city": "Miami, Fl",
+            "description": "Lorem ipsum dolor sit amet, consectetaur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo ."
         }
     ]
 };
 
- 
+
+
+
  // function literal 
 projects.display = function (project_obj){
 

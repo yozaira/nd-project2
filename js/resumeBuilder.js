@@ -282,6 +282,56 @@ services.display (services);
 
 
 
+/*
+Method to display personal information
+*/
+bio.displayInfo = function (bio_object) { 
+
+     if(bio_object) {     
+    // test object
+    // return(console.log (this),  console.log (this.name)  )
+    
+    // select container to append elements  
+    var bioStart = document.querySelector('#about .row'); 
+    
+    // create image container    
+    var bioImgDiv = document.createElement('div');
+    bioImgDiv.className = 'col-sm-6';     
+    // create image 
+    var bioPic = document.createElement('img');
+    bioPic.className  = " img-responsive";
+    bioPic.className += " polaroid";
+    bioPic.src = this.pic;
+
+    // create about me info container
+    var bioAboutDiv = document.createElement('div');
+    bioAboutDiv.className = 'col-sm-6';
+
+    // create about info title
+    var bioAboutTitle = document.createElement('h1');
+    bioAboutTitle.className = 'big-text';
+    bioAboutTitle.innerHTML  = 'I am <br>';
+    bioAboutTitle.innerHTML  +=  this.name;
+      
+    // create about me message
+    var aboutMeLeadPara = document.createElement('p');
+    aboutMeLeadPara.className = 'lead';
+    var aboutMeNextPara = document.createElement('p');
+    aboutMeLeadPara.innerHTML  = this.aboutMeLeadPara;
+    aboutMeNextPara.innerHTML += this.aboutMeNextPara;
+
+    // append elements
+    bioStart.appendChild(bioImgDiv);
+    bioImgDiv.appendChild(bioPic);
+    bioStart.appendChild(bioAboutDiv);
+    bioAboutDiv.appendChild(bioAboutTitle);
+    bioAboutDiv.appendChild(aboutMeLeadPara);
+    bioAboutDiv.appendChild(aboutMeNextPara);
+   }
+
+}
+bio.displayInfo(bio);
+
 
 
 

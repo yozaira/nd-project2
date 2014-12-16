@@ -1,0 +1,162 @@
+/*-----------------------
+----- Basic Styles -----
+-------------------------*/
+
+body {
+font-family: Raleway, Arial, sans-serif;
+font-size: 16px;
+font-weight: 300;
+color: #6d6d6d;
+overflow-x: hidden;
+}
+
+a {
+color: #F28C83;
+text-decoration: none;
+}
+
+a:hover, a:focus{
+color:#f28c83;
+text-decoration:none;
+}
+
+a: focus,
+.btn: focus {
+outline: none;
+}
+
+/*-----------------------
+----- Typo Styles ------
+-------------------------*/
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+font-weight: 300;
+}
+
+.text-white {   
+  color: #fff;  
+}
+
+.big-text {
+font-size: 58px;
+font-weight: 300;
+line-height: 62px;
+letter-spacing: 0.01em;
+word-spacing: 0.15em;
+text-transform: uppercase;
+}
+
+.md-text {
+font-size: 24px;
+font-weight: 400;
+letter-spacing: 0.01em;
+word-spacing: 0.15em;
+text-transform: uppercase;
+}
+
+.section-title{
+margin-top: -20px;
+margin-bottom: 80px;
+text-align: center;
+}
+
+/*-----------------------
+----- Layout Styles -----
+-------------------------*/
+
+.add-padding {
+padding-top: 120px;
+padding-bottom: 140px;
+}
+
+
+/*-----------------------
+----- Color Styles ------
+-------------------------*/
+
+/* backgrounds */
+.bg-teal {
+color: #fff;
+background: #509b9e;
+}
+
+
+.bg-peach{
+color: #fff;
+background: #f28c83;
+}
+
+
+.bg-cobalt-blue{
+color: #fff;
+background: #334959;
+}
+
+
+/*  borders */
+.peach-border-bottom {
+border-bottom:7px solid #f28c83;
+}
+
+
+.peach-border-top{
+border-top:7px solid #f28c83;
+}
+
+
+
+/*--------------------------
+---- Menu Styles ----
+---------------------------*/
+
+#main-nav {
+background: #fff;
+border-bottom: 1px solid #f28c83;
+
+min-width: 321px;  
+
+box-shadow: 0 0 0 transparent;
+-webkit-transition:background 0.3s ease-out;
+transition:background 0.3s ease-out;
+}
+
+
+#main-nav .container {
+padding: 0 0 20px;
+}
+
+
+#main-nav .navbar-brand {
+display: inline-block;
+margin-left: 10px;
+}
+
+
+#main-nav .navbar-brand img{
+margin-top: -3px;
+border: 2px solid #f28c83;
+margin-right: 10px;
+width: 45px;
+height: 48px;
+border-radius: 50%;
+}
+
+
+#main-nav .navbar-brand span{
+font-size: 20px;
+font-weight: 700;
+color: #f28c83;
+text-transform: uppercase;
+}
+
+
+/* bootstrap class */
+.navbar-right {  
+  margin-top: 10px;  
+}
+
+#main-nav li {
+background: transparent;
+margin: 0 10px;
+border: 2px solid transparent;
+}
+

@@ -170,7 +170,16 @@
     dynamically when this website, index.html, is opened.--> 
     <script src="js/resumeBuilder.js"></script>
 
-    <script type="text/javascript"> 
+    <script type="text/javascript">
+
+    $(document).ready(function(){       
+      services.display (services);
+      bio.displayInfo(bio);  
+      // skills.display(skills);  // why this wont work when called here??
+      projects.display(projects);
+      bio.displaySocialLinks (bio);
+      bio.displayCopyRights(bio);        
+     });
 
     </script>
   </body>

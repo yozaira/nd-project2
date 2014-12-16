@@ -176,14 +176,75 @@ services.display = function (services_obj) {
     for (var key in services_obj.service) { 
       // console.log (key) ;
       // console.log (this.service[key][0]) ;
-
       //console.log (this.service[key]) ;
       //console.log (this.service.indexOf(this.service[key]) ) ;   // http://msdn.microsoft.com/en-us/library/ie/ff679977%28v=vs.94%29.aspx
 
-      $.each(this.service[key], function(k, v) {
-      //alert(k + ' is ' + v);
-      // console.log( this.indexOf(v) );
-      });
+      // div that will containt service info
+      var serviceItemStart = document.querySelector('#services .row');
+      // create columns using bootstrap grid system 
+      var serviceItem = document.createElement('div');
+      serviceItem.className  = ' col-sm-6';
+      serviceItem.className += ' col-md-6';
+      serviceItem.className += ' service-item';
+      // create elements to hold title and description
+      var serviceItemDiv = document.createElement('div');
+      var serviceTitle   = document.createElement('h3');
+      var serviceIcon    = document.createElement('i');
+      var serviceDescription = document.createElement('p');
+      // add service info 
+      serviceTitle.innerHTML +=  services_obj.service[key].title;
+      serviceDescription.innerHTML =  services_obj.service[key].description;
+
+      // append elements to service section     
+      serviceItemStart.appendChild(serviceItem);
+
+      // add a specific color and icon to each title
+      if (this.service[key].title === 'Backend Development' ) {
+        serviceItemDiv.className = 'bg-peach';
+        serviceIcon.className = "icon-code";
+
+        serviceItem.appendChild(serviceItemDiv);  
+        serviceItemDiv.appendChild(serviceIcon);      
+        serviceItemDiv.appendChild(serviceTitle);
+        serviceItem.appendChild(serviceDescription);
+      }
+      else if (this.service[key].title === 'Web Design') {
+        serviceItemDiv.className = 'bg-teal';
+        serviceIcon.className = "icon-edit";
+
+        serviceItem.appendChild(serviceItemDiv);  
+        serviceItemDiv.appendChild(serviceIcon);      
+        serviceItemDiv.appendChild(serviceTitle);
+        serviceItem.appendChild(serviceDescription);
+      }
+      else if (this.service[key].title === 'Digital Marketing') {
+        serviceItemDiv.className = 'bg-cobalt-blue';
+        serviceIcon.className = "icon-edit";
+
+        serviceItem.appendChild(serviceItemDiv);  
+        serviceItemDiv.appendChild(serviceIcon);      
+        serviceItemDiv.appendChild(serviceTitle);
+        serviceItem.appendChild(serviceDescription);
+      }
+     else if (this.service[key].title === 'Frontend Development') {
+        serviceItemDiv.className = 'bg-teal';
+        serviceIcon.className = "icon-laptop";
+
+        serviceItem.appendChild(serviceItemDiv);  
+        serviceItemDiv.appendChild(serviceIcon);      
+        serviceItemDiv.appendChild(serviceTitle);
+        serviceItem.appendChild(serviceDescription);
+      }
+      else {
+        serviceItemDiv.className = 'aternative-class';
+        serviceItem.appendChild(serviceItemDiv);  
+        serviceItemDiv.appendChild(serviceIcon);      
+        serviceItemDiv.appendChild(serviceTitle);
+        serviceItem.appendChild(serviceDescription);
+      }
+
+
+      /*
 
       if (services_obj.service[key].title === 'Backend Development' ){
 
@@ -206,6 +267,10 @@ services.display = function (services_obj) {
          $('#services .row').append('<div class="service-item col-sm-6 col-md-6 service-item"><div class="bg-teal"></i><h3>'  
                                   + services_obj.service[key].title + '</h3></div><p>' + services_obj.service[key].description + '</p>' );
       }
+
+     */
+
+
     }
   }
 }

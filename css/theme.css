@@ -160,3 +160,44 @@ margin: 0 10px;
 border: 2px solid transparent;
 }
 
+
+/*----------------------------
+---- Header Styles ----
+-----------------------------*/
+
+#home {
+max-width: 100%;
+position: relative;              
+}
+
+
+#home .intro {
+margin-top: 0;
+position: absolute;
+margin-top: auto;
+color: #fff;
+}
+
+
+#home .intro h1 { 
+  font-size: 16px;
+  margin-top: 25px;
+  width: 100%; 
+}
+
+
+#home .intro h3 {
+font-size: 12px;  
+}
+
+
+#home .intro h1, h3 {
+font-weight: bold; 
+}
+
+
+#home img {
+margin-top: 70px;
+width: 100%;
+}
+

@@ -335,4 +335,103 @@ bio.displayInfo(bio);
 
 
 
+/*
+Method to create and display a progress bar showing the skill levels
+*/
+skills.createProgressBar = function (divToAppend, percentage, color) {
+
+  var percentage;     // level of proficiency in percentage
+  var color;          // class with the background and font color
+  var divToAppend;    // div or column where the progressbar will be appended to
+         
+  var progressBarDiv = document.createElement('div');
+  progressBarDiv.className = 'progress';
+  progressBarDiv.className += ' skill-bar';
+  var progressBar = document.createElement('div');
+  progressBar.className = color;
+  progressBar.className += ' progress-bar';
+  progressBar.setAttribute('role', 'progressbar');
+  progressBar.setAttribute('aria-valuenow', percentage);
+  progressBar.setAttribute('aria-valuemin', 0);
+  progressBar.setAttribute('aria-valuemax', 100);
+  progressBar.style.width  = percentage +'%';
+  progressBar.innerHTML ='<p>' + percentage +'%' +'</p>';
+
+  divToAppend.appendChild(progressBarDiv);
+  progressBarDiv.appendChild(progressBar);       
+} 
+
+
+  
+/*
+Method to display skills
+*/
+skills.display = function (skills_object) {
+
+  if (skills_object.skill.length > 0) {
+  
+    for ( key in skills_object.skill ) {
+      // console.log(this);
+      // console.log(key);
+      // console.log(this.skill[key]);
+      
+      // div that will containt skills
+      var skillStart = document.querySelector('#skills .row');
+      
+      // create s column for each skill using bootstrap grid system 
+      var skillDiv = document.createElement('div');
+      skillDiv.className  = 'col-sm-6';
+      skillDiv.className  += ' col-md-4';
+
+      // create elements to hold title and description
+      var skillTitle = document.createElement('h3');
+      var skillDescription = document.createElement('p');
+      // add skill info 
+      skillTitle.innerHTML =  this.skill[key].title;
+      skillDescription.innerHTML =  this.skill[key].description;
+  
+      // append elements to skill section     
+      skillStart.appendChild(skillDiv);
+      
+      // create a different progress bg color for each skill
+      if (this.skill[key].title === 'PHP Programming') {
+          skills.createProgressBar(skillDiv, this.skill[key].proficiencyLevel, 'bg-peach');
+          skillDiv.appendChild(skillTitle);
+          skillDiv.appendChild(skillDescription);   
+      }
+      else if (this.skill[key].title === 'MySQL Database') {
+         skills.createProgressBar(skillDiv, this.skill[key].proficiencyLevel, 'bg-cobalt-blue');
+         skillDiv.appendChild(skillTitle);
+         skillDiv.appendChild(skillDescription);    
+      }
+      else if (this.skill[key].title === 'HTML-CSS') {
+          skills.createProgressBar(skillDiv, this.skill[key].proficiencyLevel, 'bg-teal');
+          skillDiv.appendChild(skillTitle);
+          skillDiv.appendChild(skillDescription);   
+      }
+      else if (this.skill[key].title === 'JavaScript') {
+          skills.createProgressBar(skillDiv, this.skill[key].proficiencyLevel, 'bg-cobalt-blue');
+          skillDiv.appendChild(skillTitle);
+          skillDiv.appendChild(skillDescription);   
+      } 
+      else if (this.skill[key].title === 'Git Version Control') {
+          skills.createProgressBar(skillDiv, this.skill[key].proficiencyLevel, 'bg-teal');
+          skillDiv.appendChild(skillTitle);
+          skillDiv.appendChild(skillDescription);   
+      } 
+      else if (this.skill[key].title === 'Google Map API') {
+          skills.createProgressBar(skillDiv, this.skill[key].proficiencyLevel, 'bg-peach');
+          skillDiv.appendChild(skillTitle);
+          skillDiv.appendChild(skillDescription);   
+      } 
+      else {
+          skills.createProgressBar(skillDiv, this.skill[key].proficiencyLevel, 'bg-teal');
+          skillDiv.appendChild(skillTitle);
+          skillDiv.appendChild(skillDescription);   
+      }
+      
+    }
+  }
+} 
+skills.display(skills); 
 

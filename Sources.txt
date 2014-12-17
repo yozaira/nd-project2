@@ -1,8 +1,33 @@
-======================================================================
-			Bootstrap
-======================================================================
+===============================
+		  Video Tutorials
+==============================
+Udacity JavaScript Basics
+Udacity Intro to JQuery
+Udacity How to use Git and Github
+
+Lynda.com  Git Essentia Training
+TutsPlus - Advanced JavaScript Fundamentals
+Lynda.com  JavaScript Functions
+Lynda.com  JavaScript and JSON
+
+==============================
+		    Books
+==============================
+
+Svennerberg, Gabriel  (2010). Beginning Google Maps API 3. Apress .
+
+ Zakas., Nicholas C. (2012).  Professional JavaScript for Web Developers. Wrox.
 
 
+==============================
+	       Online articles and tutorials
+==============================
+
+
+
+		  Bootstrap
+==============================
+	
 Twitter Bootstrap Grid System
 http://getbootstrap.com/css/
 
@@ -19,9 +44,9 @@ https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/
 
 
 
-======================================================================
+
 			CSS
-======================================================================
+====================
 
 CSS media queries
 https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries
@@ -48,9 +73,10 @@ http://css-tricks.com/almanac/properties/b/border-radius/
 CSS3 Progress Bars
 http://css-tricks.com/css3-progress-bars/
 
-==================================================================
+
+
 			JQuery:
-==================================================================
+=========================
 
 43,439 reasons to use append() correctly
 http://www.learningjquery.com/2009/03/43439-reasons-to-use-append-correctly/
@@ -64,9 +90,11 @@ http://stackoverflow.com/questions/195951/change-an-elements-css-class-with-java
 Responsive animated progress bar with CSS3, Jquery and Twitter Bootstrap
 http://w3digest.com/responsive-animated-progress-bar-with-css3-jquery-and-twitter-bootstrap/
 
-===================================================================
+
+
+
 			JavaScript:
-===================================================================
+===========================
 
 document.createElement
 Pasted from <https://developer.mozilla.org/en-US/docs/Web/API/document.createElement> 
@@ -116,9 +144,10 @@ http://www.mrspeaker.net/2009/11/05/self-invoking-functions/
 JavaScript closure inside loops â€“ simple practical example
 http://stackoverflow.com/questions/750486/javascript-closure-inside-loops-simple-practical-example
 
-==========================================================================
+
+
 		           Google Maps
-==========================================================================
+================================
 
 Introduction to the Google Maps API 
 https://www.youtube.com/watch?v=ZE8ODPL2VPI> 

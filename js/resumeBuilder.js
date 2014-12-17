@@ -3,15 +3,15 @@ var bio = {
   "role": "Web Developer",
   "pic":  "images/aboutPic.png",
   "contacts": {
-       "location": "Atlanta, GA",
-       "mobile":   "650-555-5555",
-       "email":    "yozaira@exampte.com",
-       "website":  "http://yoziesite.com"  
+     "location": "Atlanta, GA",
+     "mobile":   "650-555-5555",
+     "email":    "yozaira@exampte.com",
+     "website":  "http://yoziesite.com"  
   } ,
   "socialLinks": {
-       "github":      "http://github.com" ,
-       "twitter":     "http://twitter.com",
-       "google-plus": "http://googleplus.com"  
+     "github":      "http://github.com" ,
+     "twitter":     "http://twitter.com",
+     "google-plus": "http://googleplus.com"  
    } ,
   "aboutMeLeadPara": "I am Yozie Rojas, do pancetta swine hamburger incididunt in excepteur irure pig labore est venison dolor ex adipisicing. Labore capicola veniam.",
   "aboutMeNextPara":  "<p>Bacon ipsum dolor sit amet shoulder drumstick spare ribs shank, magna in sirloin. Turducken dolore tempor irure tenderloin pork belly shankle"
@@ -20,55 +20,55 @@ var bio = {
 
 
 var services = {
- "service" : [ 
-    {
-    "title": "Backend Development",
-    "description": "torem ipsun dolor sit '<b>dolor sit amet<\/b>', etc.torem ipsun dolor sit anet etc etc etc torem ipsun dolor sit anet etc etc etc" 
-                  + "torem ipsun dolor sit '<b>dolor sit amet<\/b>', etc.torem ipsun dolor sit anet etc etc etc torem ipsun dolor sit anet etc etc etc"
-    }, {
-    "title": "Web Design",
-    "description": "torem ipsun dolor sit '<a href='#'>dolor sit amet<\/a>', etc.torem ipsun dolor sit anet etc etc etc torem ipsun dolor sit anet etc etc etc" 
-                   +"torem ipsun dolor sit '<b>dolor sit amet<\/b>', etc.torem ipsun dolor sit anet etc etc etc torem ipsun dolor sit anet etc etc etc"
-    }, {
-    "title": "Frontend Development",
-    "description":  "torem ipsun dolor sit anet etc etc etc.torem ipsun dolor sit anet etc etc etc torem ipsun dolor sit anet etc etc etc"
-    }, {
-    "title": "Digital Marketing",
-    "description": "torem ipsun dolor sit anet etc etc etc.torem ipsun dolor sit anet etc etc etc torem ipsun dolor sit anet etc etc etc"
-    }
-  ]
+   "service" : [ 
+      {
+      "title": "Backend Development",
+      "description": "torem ipsun dolor sit '<b>dolor sit amet<\/b>', etc.torem ipsun dolor sit anet etc etc etc torem ipsun dolor sit anet etc etc etc" 
+                    + "torem ipsun dolor sit '<b>dolor sit amet<\/b>', etc.torem ipsun dolor sit anet etc etc etc torem ipsun dolor sit anet etc etc etc"
+      }, {
+      "title": "Web Design",
+      "description": "torem ipsun dolor sit '<a href='#'>dolor sit amet<\/a>', etc.torem ipsun dolor sit anet etc etc etc torem ipsun dolor sit anet etc etc etc" 
+                     +"torem ipsun dolor sit '<b>dolor sit amet<\/b>', etc.torem ipsun dolor sit anet etc etc etc torem ipsun dolor sit anet etc etc etc"
+      }, {
+      "title": "Frontend Development",
+      "description":  "torem ipsun dolor sit anet etc etc etc.torem ipsun dolor sit anet etc etc etc torem ipsun dolor sit anet etc etc etc"
+      }, {
+      "title": "Digital Marketing",
+      "description": "torem ipsun dolor sit anet etc etc etc.torem ipsun dolor sit anet etc etc etc torem ipsun dolor sit anet etc etc etc"
+      }
+    ]
 };
 
 
 
 var skills = {
- "skill": [ 
-    {
-    "title": "PHP Programming",
-    "proficiencyLevel": "70",
-    "description": "torem ipsun dolor sit '<b>dolor sit amet<\/b>', etc.torem ipsun dolor sit anet etc etc etc torem ipsun dolor sit anet etc etc etc" 
-    }, {
-    "title": "MySQL Database",
-    "proficiencyLevel": "70",
-    "description": "torem ipsun dolor sit '<a href='#'>dolor sit amet<\/a>', etc.torem ipsun dolor sit anet etc etc etc torem ipsun dolor sit anet etc etc etc"      
-    }, {      
-    "title": "HTML-CSS",
-    "proficiencyLevel": "80",
-    "description":  "torem ipsun dolor sit anet etc etc etc.torem ipsun dolor sit anet etc etc etc torem ipsun dolor sit anet etc etc etc"
-    }, {
-    "title": "JavaScript",
-    "proficiencyLevel": "60",
-    "description":  "torem ipsun dolor sit anet etc etc etc.torem ipsun dolor sit anet etc etc etc torem ipsun dolor sit anet etc etc etc"
-    }, {
-    "title": "Git Version Control",
-    "proficiencyLevel": "60",
-    "description":  "torem ipsun dolor sit anet etc etc etc.torem ipsun dolor sit anet etc etc etc torem ipsun dolor sit anet etc etc etc"
-    }, {
-    "title": "Google Map API",
-    "proficiencyLevel": "60",
-    "description":  "torem ipsun dolor sit anet etc etc etc.torem ipsun dolor sit anet etc etc etc torem ipsun dolor sit anet etc etc etc"
-    }
-  ]
+   "skill": [ 
+      {
+      "title": "PHP Programming",
+      "proficiencyLevel": "70",
+      "description": "torem ipsun dolor sit '<b>dolor sit amet<\/b>', etc.torem ipsun dolor sit anet etc etc etc torem ipsun dolor sit anet etc etc etc" 
+      }, {
+      "title": "MySQL Database",
+      "proficiencyLevel": "70",
+      "description": "torem ipsun dolor sit '<a href='#'>dolor sit amet<\/a>', etc.torem ipsun dolor sit anet etc etc etc torem ipsun dolor sit anet etc etc etc"      
+      }, {      
+      "title": "HTML-CSS",
+      "proficiencyLevel": "80",
+      "description":  "torem ipsun dolor sit anet etc etc etc.torem ipsun dolor sit anet etc etc etc torem ipsun dolor sit anet etc etc etc"
+      }, {
+      "title": "JavaScript",
+      "proficiencyLevel": "60",
+      "description":  "torem ipsun dolor sit anet etc etc etc.torem ipsun dolor sit anet etc etc etc torem ipsun dolor sit anet etc etc etc"
+      }, {
+      "title": "Git Version Control",
+      "proficiencyLevel": "60",
+      "description":  "torem ipsun dolor sit anet etc etc etc.torem ipsun dolor sit anet etc etc etc torem ipsun dolor sit anet etc etc etc"
+      }, {
+      "title": "Google Map API",
+      "proficiencyLevel": "60",
+      "description":  "torem ipsun dolor sit anet etc etc etc.torem ipsun dolor sit anet etc etc etc torem ipsun dolor sit anet etc etc etc"
+      }
+    ]
 };
 
 
@@ -142,11 +142,11 @@ var projects = {
 var work = {
   "jobs": [
     {
-      "employer": "Freelance",
-      "title": "Web Developer",
-      "dates": "Jan 2012- Present",
-      "city": "Washington, DC",
-      "description": "Lorem ipsum dolor sit amet, consectetaur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo ."
+    "employer": "Freelance",
+    "title": "Web Developer",
+    "dates": "Jan 2012- Present",
+    "city": "Washington, DC",
+    "description": "Lorem ipsum dolor sit amet, consectetaur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo ."
     }, {
       "employer": "USAID Child Health Integrated Program (MCHIP)",
       "title": "Communication & Social Media Assistant",

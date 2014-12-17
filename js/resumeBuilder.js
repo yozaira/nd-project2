@@ -473,7 +473,6 @@ Method to display projects
   projects.display = function (projects_obj) {  
 
   if(projects_obj.project.length > 0) { 
-
       for (var key in projects_obj.project) { 
       // console.log (this.project[key].images) ;
 
@@ -529,14 +528,12 @@ bio.displaySocialLinks = function(bio_object) {
 
   var linksContainer = document.querySelector ('#main-footer .row');
   var  output = '<ul class="social-links text-center">';
-
   for (var key in this.socialLinks ) {
     //console.log(key);
     // console.log(this.socialLinks[key]) 
     output += '<li><a href="' + this.socialLinks[key] +'"><i class="icon-'+key+' "></i></a></li>';
   }
   output += '</ul>';
-
   linksContainer.innerHTML = output;
 }
 
@@ -553,6 +550,5 @@ bio.displayCopyRights = function (bio_object) {
   var copyRightContainer = document.querySelector ('#main-footer #copy-rights');
   var  output = '<p class="text-center">&copy; ' + year + '- All rights reserved</p>';
   output  += '<p class="text-center"><a href="'+this.contacts.website+'">'+this.name+ '</a></p> ';
-
   copyRightContainer.innerHTML = output;
 }

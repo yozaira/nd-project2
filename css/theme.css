@@ -344,6 +344,91 @@ word-spacing: 0.15em;
 }
 
 
+/*----------------------------
+----- Contact Styles ----
+------------------------------*/
+
+#contact {
+background: url(../images/women-coding.jpg) no-repeat center center fixed; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+
+
+/* form inputs */
+#contact-form .form-control {
+background: #fff;
+background: rgba(255,255,255,0.9);  /* opac background */
+border: none;
+height: 58px;
+border-radius: 2px;     
+outline: none;
+font-size: 25px;           /* input text size, including placeholders.  Has to be same as icon size  */
+color: #509b9e;            /* input text color: teal  */
+margin-bottom: 30px;       /* space between inputs */
+padding-left: 54px;        /*  make space between icons and placeholders  */
+}
+
+
+/* form text area */
+#contact-form textarea.form-control {
+background: #fff;
+background: rgba(255,255,255,0.9);  /* opac background */
+border: none;
+height: auto;
+max-width: 100%;
+min-width: 100%;
+font-size: 25px;
+line-height: 1.5;
+padding-top: 15px;
+}
+
+
+/* input icons */
+#contact-form [class^="icon-"] {
+position: absolute;
+font-size: 25px;
+color: #509b9e;     /* color teal */
+color: #f28c83;     /* color peach */
+margin-top: 15px;
+margin-left: 10px;          
+}
+
+
+/* input placeholders */
+#contact-form .form-control::-webkit-input-placeholder { 
+color: #f28c83; opacity: 1;   
+}  /* WebKit browsers */
+
+
+#contact-form .form-control:-moz-placeholder { 
+color: #f28c83;  opacity: 1; 
+}       
+
+
+/* Mozilla Firefox 4 to 18 */  
+#contact-form .form-control::-moz-placeholder {
+color: #f28c83;  opacity: 1; 
+}   /* Mozilla Firefox 19+ */ 
+
+
+#contact-form .form-control:-ms-input-placeholder {
+color: #f28c83;
+} /* Internet Explorer 10+ */
+
+
+#contact-form [type="submit"]  { 
+background: #509b9e;    /* color teal */
+background: #f28c83;    /* color peach */
+font-size: 23px;
+color: #fff;
+font-weight: 400;
+}
+
+
+
 
 /*----------------------
 ----- Footer Styles ----

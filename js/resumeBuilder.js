@@ -333,8 +333,6 @@ bio.displayInfo = function (bio_object) {
 
 
 
-
-
 /*
 Method to create and display a progress bar showing the skill levels
 */
@@ -469,7 +467,6 @@ skills.display(skills);   // Why this method dont work when called on index.html
 
 
 
-
 /*
 Method to display projects
 */
@@ -480,7 +477,7 @@ Method to display projects
       for (var key in projects_obj.project) { 
       // console.log (this.project[key].images) ;
 
-      // div that will contain service info
+      // div that will containt service info
       var projectItemStart = document.querySelector('#portfolio .row');
       // create columns using bootstrap grid system 
       var projectItem = document.createElement('div');
@@ -500,20 +497,24 @@ Method to display projects
 
       // create title and description elements
       var  projectTitle = document.createElement('h3');
+      // create project link 
+      var  titleLink = document.createElement('a');
+      titleLink.setAttribute('href', this.project[key].githubLink);
+      // create project description
       var  projectDescription = document.createElement('p');
-      // add service info 
-      projectTitle.innerHTML = this. project[key].title;
+      // add service information to elements 
+      projectTitle.innerHTML = this.project[key].title;
       projectDescription.innerHTML =  this.project[key].description;
 
       // append elements to service section     
       projectItemStart.appendChild(projectItem);
       projectItem.appendChild(projectPic);
-      projectItem.appendChild(projectTitle);
+      projectItem.appendChild(titleLink);
+      titleLink.appendChild(projectTitle);
       projectItem.appendChild(projectDescription);
     }  
   }
 }
-
 
 
 

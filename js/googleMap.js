@@ -82,6 +82,30 @@ work.showJobsMap = function(work_obj) {
 
 
 
+  function addMarker(map, contentInfoWindow, geoLocation) {
+    // center map
+    map.setCenter(geoLocation);
+    // add a marker to the map
+    var marker = new google.maps.Marker({
+      map: map,
+      position: geoLocation, 
+      animation: google.maps.Animation.DROP 
+    });                                           
+    // create the event listener. It now has access to the values of i and marker as they were during its creation
+    google.maps.event.addListener(marker, 'click', function() { 
+      if (typeof infowindow != 'undefined')  infowindow.close();
+      infowindow = new google.maps.InfoWindow(); // creating the content of the InfoWindow
+      infowindow.setContent(contentInfoWindow); // setting the content of the InfoWindow
+      infowindow.open(map, marker); 
+    });               
+    // Extending the bounds object with each LatLng
+    bounds.extend( geoLocation);    
+    // Adjusting the map to new bounding box
+    map.fitBounds(bounds);
+  }
+
+
+
   function createMapLocations(location) {
 
     for(var i = 0; i < location.length; i++) {           
@@ -91,28 +115,8 @@ work.showJobsMap = function(work_obj) {
         geocoder = new google.maps.Geocoder();  // instantiate a geocoder object  
         geocoder.geocode( { 'address': location[i] }, function(results, status) { 
           if(status == google.maps.GeocoderStatus.OK ) {
-
-            // center map
-            map.setCenter(results[0].geometry.location);
-            // add a marker to the map
-            var marker = new google.maps.Marker({
-              map: map,
-              position: results[0].geometry.location, 
-              animation: google.maps.Animation.DROP 
-            });                                           
-            // create the event listener. It now has access to the values of i and marker as they were during its creation
-            google.maps.event.addListener(marker, 'click', function() { 
-              if (typeof infowindow != 'undefined')  infowindow.close();
-              infowindow = new google.maps.InfoWindow();  // creating the content of the InfoWindow
-              infowindow.setContent(location[i]);   // setting the content of the InfoWindow
-              infowindow.open(map, marker); 
-            });               
-            // Extending the bounds object with each LatLng
-            bounds.extend( results[0].geometry.location);    
-            // Adjusting the map to new bounding box
-            map.fitBounds(bounds);
-
-
+             // call addMarket function
+             addMarker(map, location[i], results[0].geometry.location);
           }else {
             alert("Geocode was not successful for the following reason: " + status);      
           }         

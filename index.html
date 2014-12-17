@@ -134,10 +134,51 @@
       =============================================== -->
       <section id="contact" class="add-padding">  
         <div class="container">     
-          <div class="row">   
-          <!-- contact form -->
-          </div>        
-        </div>    
+          <div class="row"> 
+
+            <!-- contact form -->
+            <div class="col-sm-6 col-md-5">       
+              <h1 class="big-text text-white">Contact Me</h1>         
+              <p class="lead text-white">
+                I am available for freelance. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>       
+              <p class="text-white">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt, dui ac porta.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt, dui ac porta.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt, dui ac porta.
+              </p>          
+            </div>
+
+            <!--Contact Form -->
+            <form id="contact-form" class="col-sm-6 col-md-offset-1" action="contact.php" method="post" novalidate>
+
+              <div class="form-group">
+                <!-- <label class="control-label" for="contact-name">Name</label> -->
+                <div class="controls">
+                  <i class="icon-user"></i>
+                  <input type="text" name="contactName" id="contact-name" placeholder="Your name" class="form-control">
+                </div>
+              </div><!-- #end name input -->
+
+              <div class="form-group">
+                <!-- <label class="control-label" for="contact-mail">Email</label> -->
+                <div class="controls">
+                  <i class="icon-envelope"></i>
+                  <input  type="email"  name="email" id="contact-mail"  placeholder="Your email" class="form-control">
+                </div>
+              </div><!-- #end email input -->
+
+              <div class="form-group">
+                <!-- <label class="control-label" for="contact-message">Message</label> -->
+                <div class="controls">
+                  <i class="icon-comment"></i>
+                  <textarea name="comments"   id="contact-message"  placeholder="Your message" class="form-control"></textarea>
+                </div>
+              </div><!-- #end textarea -->
+
+              <p><button name="submit" type="submit" class="btn btn-block">Send Message</button></p>      
+            </form><!-- #end contact-form --> 
+
+          </div><!-- #end row -->       
+        </div><!-- #end container -->     
       </section>
       <!-- ==============================================
       MAP

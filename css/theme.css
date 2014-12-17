@@ -429,6 +429,36 @@ font-weight: 400;
 
 
 
+/*----------------------------
+----- Map Styles ----
+------------------------------*/
+
+#mapDiv {
+overflow: hidden;
+padding: 20px;
+padding-bottom: 40px;
+}
+
+
+#mapDiv h2 {
+margin-top: 10px;
+}
+
+
+#mapDiv .container {
+width: 100%;
+margin-top: 2.5%;
+margin-bottom: auto;
+}
+
+
+#map {
+height: 500px;
+width: 100%;
+/* border: 1px solid black; */
+}
+
+
 
 /*----------------------
 ----- Footer Styles ----

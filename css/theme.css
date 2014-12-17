@@ -120,31 +120,28 @@ transition: background 0.3s ease-out;
 
 
 #main-nav .container {
-padding: 0 35px 10px 0;
 -webkit-transition: padding 0.5s ease-out;
 transition: padding 0.5s ease-out;
 }
 
 
 #main-nav .navbar-header {
-margin-top: 15px;
+margin: 0px;
 }
 
 
 #main-nav .navbar-brand {
 display: inline-block;
-margin-left: 20px;
-padding: 5px;
+margin: 5px 5px;
+padding: 5px 10px 0 5px; 
 }
 
 
 #main-nav .navbar-brand img {
-margin-top: -3px;
 border: 2px solid #f28c83;
-margin-right: 10px;
-width: 45px;
-height: 45px;
-line-height: 45px;
+width: 40px;
+height: 40px;
+line-height: 40px;
 border-radius: 50%;
 }
 
@@ -154,12 +151,13 @@ font-size: 20px;
 font-weight: 700;
 color: #f28c83;
 text-transform: uppercase;
+padding-top: 10px;
 }
 
 
 /* bootstrap class */
 .navbar-right {
-margin-top: 10px;  
+margin-top: 10px; 
 }
 
 
@@ -172,6 +170,11 @@ border: 2px solid transparent;
 
 
 /* menu for small screens */
+#main-nav .navbar-toggle {
+margin-right:15px;  
+}
+
+
 #main-nav .navbar-toggle .icon-bar {
 width: 28px;
 height: 4px;
@@ -184,7 +187,6 @@ background: #6d6d6d !important;
 #main-nav .navbar-toggle .icon-bar + .icon-bar { 
 margin-top: 4px;
 }
-
 
 
 /*----------------------------
@@ -223,8 +225,8 @@ font-weight: bold;
 
 
 #home img {
-margin-top: 70px; 
-width: 100%; 
+margin-top: 60px;  /*  this determins the height of man-nav. */
+width: 100%;
 }
 
 
@@ -712,8 +714,12 @@ I started working on small screens first, and continue adjustng until desktop si
   /* #main-nav{ background: yellow;  } */
 
   #main-nav .navbar-brand {  
-  margin-left: -5px;      /* just needed adjust here */
+  margin-left: -5px;  /* adjust only here */
   } 
+
+  .navbar-right {
+  margin-top: 0;
+  }
 
 
   #home .intro {
@@ -786,6 +792,11 @@ I started working on small screens first, and continue adjustng until desktop si
 
   /* #main-nav{ background: cyan;  } */
 
+  .navbar-right {
+  margin-top: 0;
+  }
+
+
   #home .intro {  
   margin-top: 165px;  
   }
@@ -847,6 +858,11 @@ I started working on small screens first, and continue adjustng until desktop si
 
 
 @media only screen and  (min-width: 1201px)  { 
+
+  .navbar-right {
+  margin-top: 0;
+  }
+
 
   #home .intro {  
   margin-top: 265px;  

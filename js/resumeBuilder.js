@@ -338,102 +338,135 @@ bio.displayInfo = function (bio_object) {
 /*
 Method to create and display a progress bar showing the skill levels
 */
-skills.createProgressBar = function (divToAppend, percentage, color) {
-
-  var percentage;     // level of proficiency in percentage
-  var color;          // class with the background and font color
-  var divToAppend;    // div or column where the progressbar will be appended to
+skills.createProgressBar = function (divToAppend, percent, bgColor) {
          
-  var progressBarDiv = document.createElement('div');
-  progressBarDiv.className = 'progress';
-  progressBarDiv.className += ' skill-bar';
+  var progressContainer = document.createElement('div');
+  progressContainer.className = 'progress';
   var progressBar = document.createElement('div');
-  progressBar.className = color;
-  progressBar.className += ' progress-bar';
+  // Noted that classList does not perform very well on IE.  Read this: http://stackoverflow.com/questions/8098406/code-with-classlist-does-not-work-in-ie
+  // progressBar.classList.add('progress-bar', 'six-sec-ease-in-out');  https://developer.mozilla.org/en-US/docs/Web/API/Element.classList 
+  progressBar.className = 'progress-bar';
+  progressBar.className +=' six-sec-ease-in-out';
+  progressBar.className += bgColor;
   progressBar.setAttribute('role', 'progressbar');
-  progressBar.setAttribute('aria-valuenow', percentage);
+  progressBar.setAttribute('aria-valuenow', percent);
   progressBar.setAttribute('aria-valuemin', 0);
   progressBar.setAttribute('aria-valuemax', 100);
-  progressBar.style.width  = percentage +'%';
-  progressBar.innerHTML ='<p>' + percentage +'%' +'</p>';
+  // progressBar.style.width  = percent +'%'; // this will create a static width. Disable and add the ease-out class
+  progressBar.innerHTML = '<p>' + percent +'%' +'</p>';
+    
+  // append elements
+  divToAppend.appendChild(progressContainer);
+  progressContainer.appendChild(progressBar);     
 
-  divToAppend.appendChild(progressBarDiv);
-  progressBarDiv.appendChild(progressBar);       
+  // jQuery provides document.ready, which abstracts across browsers quirks away, and fires as soon as the page's DOM is ready (doesn't wait for images etc.).
+  // window.onload vs $(document).ready()  http://stackoverflow.com/questions/3698200/window-onload-vs-document-ready
+  // native event  http://caniuse.com/#feat=domcontentloaded
+  if ( document.addEventListener ) {   
+    document.addEventListener("DOMContentLoaded", function(){  // this is working on FFox and Chrome, and IE11
+     skills.animateBar();  // call animateBar method on document ready, or animation wont work  
+      }, false);
+  }
 } 
 
 
+
+/*
+Method to add a percentage value width according to the value of aria-valuenow. Call it on createProgressBar() method to animate the bar
+*/
+skills.animateBar = function (){
+  var bars = document.querySelectorAll('div.progress-bar') ;  
+  for (var i = 0; i < bars.length; i++ ) {
+     bars[i].style.width = bars[i].getAttribute('aria-valuenow') + '%';
+  } 
+}
+//animateBar();  // NOTE: If not called on window or document ready, this aill add the with attribute value to each bar, but will not be animated
+
+ 
+  
   
 /*
-Method to display skills
-*/
-skills.display = function (skills_object) {
+Method to create and display skills
+*/  
+skills.display = function (object) {
 
-  if (skills_object.skill.length > 0) {
-  
-    for ( key in skills_object.skill ) {
-      // console.log(this);
-      // console.log(key);
-      // console.log(this.skill[key]);
+  if (this.skill.length > 0) {
+    for (var key in this.skill ) {  
       
       // div that will containt skills
       var skillStart = document.querySelector('#skills .row');
-      
+        
       // create s column for each skill using bootstrap grid system 
       var skillDiv = document.createElement('div');
-      skillDiv.className  = 'col-sm-6';
+      skillDiv.className  = 'skill';
+      skillDiv.className  += ' col-sm-6';
       skillDiv.className  += ' col-md-4';
-
+        
+      // create s column for each skill using bootstrap grid system 
+      var skillDetails = document.createElement('div');
+      skillDetails.className  = 'skill-details';        // this div will allow to manipulate margins on small screens without affecting col-md col-sm.  Check file css media queries
+        
       // create elements to hold title and description
       var skillTitle = document.createElement('h3');
       var skillDescription = document.createElement('p');
       // add skill info 
       skillTitle.innerHTML =  this.skill[key].title;
       skillDescription.innerHTML =  this.skill[key].description;
-  
+    
       // append elements to skill section     
       skillStart.appendChild(skillDiv);
-      
+        
       // create a different progress bg color for each skill
+        
       if (this.skill[key].title === 'PHP Programming') {
-          skills.createProgressBar(skillDiv, this.skill[key].proficiencyLevel, 'bg-peach');
-          skillDiv.appendChild(skillTitle);
-          skillDiv.appendChild(skillDescription);   
+        // generate progressbar before appending sikills details
+        this.createProgressBar(skillDiv, this.skill[key].proficiencyLevel, ' bg-peach');
+        // append skills details to the same div progressbar was appended
+        skillDiv.appendChild(skillDetails);
+        skillDetails.appendChild(skillTitle);
+        skillDetails.appendChild(skillDescription);   
       }
       else if (this.skill[key].title === 'MySQL Database') {
-         skills.createProgressBar(skillDiv, this.skill[key].proficiencyLevel, 'bg-cobalt-blue');
-         skillDiv.appendChild(skillTitle);
-         skillDiv.appendChild(skillDescription);    
+           this.createProgressBar(skillDiv, this.skill[key].proficiencyLevel, ' bg-cobalt-blue');
+          skillDiv.appendChild(skillDetails);
+          skillDetails.appendChild(skillTitle);
+          skillDetails.appendChild(skillDescription);
       }
       else if (this.skill[key].title === 'HTML-CSS') {
-          skills.createProgressBar(skillDiv, this.skill[key].proficiencyLevel, 'bg-teal');
-          skillDiv.appendChild(skillTitle);
-          skillDiv.appendChild(skillDescription);   
+          this.createProgressBar(skillDiv, this.skill[key].proficiencyLevel, ' bg-teal');
+          skillDiv.appendChild(skillDetails);
+          skillDetails.appendChild(skillTitle);
+          skillDetails.appendChild(skillDescription); 
       }
       else if (this.skill[key].title === 'JavaScript') {
-          skills.createProgressBar(skillDiv, this.skill[key].proficiencyLevel, 'bg-cobalt-blue');
-          skillDiv.appendChild(skillTitle);
-          skillDiv.appendChild(skillDescription);   
+          this.createProgressBar(skillDiv, this.skill[key].proficiencyLevel, ' bg-cobalt-blue');
+          skillDiv.appendChild(skillDetails);
+          skillDetails.appendChild(skillTitle);
+          skillDetails.appendChild(skillDescription); 
       } 
       else if (this.skill[key].title === 'Git Version Control') {
-          skills.createProgressBar(skillDiv, this.skill[key].proficiencyLevel, 'bg-teal');
-          skillDiv.appendChild(skillTitle);
-          skillDiv.appendChild(skillDescription);   
+          this.createProgressBar(skillDiv, this.skill[key].proficiencyLevel, ' bg-teal');
+          skillDiv.appendChild(skillDetails);
+          skillDetails.appendChild(skillTitle);
+          skillDetails.appendChild(skillDescription); 
       } 
       else if (this.skill[key].title === 'Google Map API') {
-          skills.createProgressBar(skillDiv, this.skill[key].proficiencyLevel, 'bg-peach');
-          skillDiv.appendChild(skillTitle);
-          skillDiv.appendChild(skillDescription);   
+          this.createProgressBar(skillDiv, this.skill[key].proficiencyLevel, ' bg-peach');
+          skillDiv.appendChild(skillDetails);
+          skillDetails.appendChild(skillTitle);
+          skillDetails.appendChild(skillDescription); 
       } 
       else {
-          skills.createProgressBar(skillDiv, this.skill[key].proficiencyLevel, 'bg-teal');
-          skillDiv.appendChild(skillTitle);
-          skillDiv.appendChild(skillDescription);   
+          this.createProgressBar(skillDiv, this.skill[key].proficiencyLevel, ' bg-teal');
+          skillDiv.appendChild(skillDetails);
+          skillDetails.appendChild(skillTitle);
+          skillDetails.appendChild(skillDescription); 
       }
-      
     }
   }
-} 
-skills.display(skills); 
+}
+skills.display(skills);   // Why this method dont work when called on index.html, like the rest???
+
 
 
 

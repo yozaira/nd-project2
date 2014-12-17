@@ -170,14 +170,16 @@ Method to display web development services
 */
 services.display = function (services_obj) {  
 
-  //  console.log(Object.keys(this.service));   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
+  //  console.log(Object.keys(this.service));
+  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
 
   if(this.service.length > 0) { 
     for (var key in services_obj.service) { 
       // console.log (key) ;
       // console.log (this.service[key][0]) ;
       //console.log (this.service[key]) ;
-      //console.log (this.service.indexOf(this.service[key]) ) ;   // http://msdn.microsoft.com/en-us/library/ie/ff679977%28v=vs.94%29.aspx
+      //console.log (this.service.indexOf(this.service[key]) );
+      // http://msdn.microsoft.com/en-us/library/ie/ff679977%28v=vs.94%29.aspx
 
       // div that will containt service info
       var serviceItemStart = document.querySelector('#services .row');
@@ -247,34 +249,6 @@ services.display = function (services_obj) {
         serviceItemDiv.appendChild(serviceTitle);
         serviceItem.appendChild(serviceDescription);
       }
-
-      /*
-
-      if (services_obj.service[key].title === 'Backend Development' ){
-
-         $('#services .row').append('<div class="service-item col-sm-6 col-md-6 service-item"><div class="bg-peach"><i class="icon-code"></i><h3>'  
-                                  + services_obj.service[key].title + '</h3></div><p>' + services_obj.service[key].description + '</p>' );           
-      } 
-      else if (services_obj.service[key].title === 'Web Design') {
-         $('#services .row').append('<div class="service-item col-sm-6 col-md-6 service-item"><div class="bg-teal"><i class="icon-edit"></i><h3>'  
-                                  + services_obj.service[key].title + '</h3></div><p>' + services_obj.service[key].description + '</p>' );                                  
-      }
-      else if (services_obj.service[key].title === 'Frontend Development') {
-          $('#services .row').append('<div class="service-item col-sm-6 col-md-6 service-item"><div class="bg-cobalt-blue"><i class="icon-laptop"></i><h3>'  
-                                  + services_obj.service[key].title + '</h3></div><p>' + services_obj.service[key].description + '</p>' );                            
-      }
-      else if (services_obj.service[key].title === 'Digital Marketing') {
-         $('#services .row').append('<div class="service-item col-sm-6 col-md-6 service-item"><div class="bg-cobalt-blue"><i class="icon-laptop"></i><h3>'  
-                                  + services_obj.service[key].title + '</h3></div><p>' + services_obj.service[key].description + '</p>' );
-      }
-      else {
-         $('#services .row').append('<div class="service-item col-sm-6 col-md-6 service-item"><div class="bg-teal"></i><h3>'  
-                                  + services_obj.service[key].title + '</h3></div><p>' + services_obj.service[key].description + '</p>' );
-      }
-
-     */
-
-
     }
   }
 }
@@ -341,8 +315,10 @@ skills.createProgressBar = function (divToAppend, percent, bgColor) {
   var progressContainer = document.createElement('div');
   progressContainer.className = 'progress';
   var progressBar = document.createElement('div');
-  // Noted that classList does not perform very well on IE.  Read this: http://stackoverflow.com/questions/8098406/code-with-classlist-does-not-work-in-ie
-  // progressBar.classList.add('progress-bar', 'six-sec-ease-in-out');  https://developer.mozilla.org/en-US/docs/Web/API/Element.classList 
+  // Noted that classList does not perform very well on IE.
+  // Read this: http://stackoverflow.com/questions/8098406/code-with-classlist-does-not-work-in-ie
+  // progressBar.classList.add('progress-bar', 'six-sec-ease-in-out');
+  // https://developer.mozilla.org/en-US/docs/Web/API/Element.classList 
   progressBar.className = 'progress-bar';
   progressBar.className +=' six-sec-ease-in-out';
   progressBar.className += bgColor;
@@ -357,7 +333,8 @@ skills.createProgressBar = function (divToAppend, percent, bgColor) {
   divToAppend.appendChild(progressContainer);
   progressContainer.appendChild(progressBar);     
 
-  // jQuery provides document.ready, which abstracts across browsers quirks away, and fires as soon as the page's DOM is ready (doesn't wait for images etc.).
+  // jQuery provides document.ready, which abstracts across browsers quirks away, 
+  //and fires as soon as the page's DOM is ready (doesn't wait for images etc.).
   // window.onload vs $(document).ready()  http://stackoverflow.com/questions/3698200/window-onload-vs-document-ready
   // native event  http://caniuse.com/#feat=domcontentloaded
   if ( document.addEventListener ) {   
@@ -370,7 +347,8 @@ skills.createProgressBar = function (divToAppend, percent, bgColor) {
 
 
 /*
-Method to add a percentage value width according to the value of aria-valuenow. Call it on createProgressBar() method to animate the bar
+Method to add a percentage value width according to the value of aria-valuenow.
+// Call it on createProgressBar() method to animate the bar
 */
 skills.animateBar = function (){
   var bars = document.querySelectorAll('div.progress-bar') ;  
@@ -378,7 +356,8 @@ skills.animateBar = function (){
      bars[i].style.width = bars[i].getAttribute('aria-valuenow') + '%';
   } 
 }
-//animateBar();  // NOTE: If not called on window or document ready, this aill add the with attribute value to each bar, but will not be animated
+//animateBar();  // NOTE: If not called on window or document ready, 
+                 // this aill add the with attribute value to each bar, but will not be animated
 
  
   
@@ -402,7 +381,9 @@ skills.display = function (object) {
         
       // create s column for each skill using bootstrap grid system 
       var skillDetails = document.createElement('div');
-      skillDetails.className  = 'skill-details';        // this div will allow to manipulate margins on small screens without affecting col-md col-sm.  Check file css media queries
+      // this div will allow to manipulate margins on small screens without affecting col-md col-sm.
+      // Check file css media queries
+      skillDetails.className  = 'skill-details';  
         
       // create elements to hold title and description
       var skillTitle = document.createElement('h3');
@@ -463,7 +444,7 @@ skills.display = function (object) {
     }
   }
 }
-skills.display(skills);   // Why this method dont work when called on index.html, like the rest???
+skills.display(skills); // Why this method dont work when called on index.html, like the rest???
 
 
 

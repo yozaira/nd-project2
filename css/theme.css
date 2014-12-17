@@ -109,41 +109,47 @@ border-top:7px solid #f28c83;
 /*--------------------------
 ---- Menu Styles ----
 ---------------------------*/
-
 #main-nav {
 background: #fff;
-border-bottom: 1px solid #f28c83;
-
+border-bottom: 1px solid #f28c83;  
 min-width: 321px;  
-
-box-shadow: 0 0 0 transparent;
--webkit-transition:background 0.3s ease-out;
-transition:background 0.3s ease-out;
+box-shadow: 0 0 0px transparent;
+-webkit-transition: background 0.3s ease-out;
+transition: background 0.3s ease-out;
 }
 
 
 #main-nav .container {
-padding: 0 0 20px;
+padding: 0 35px 10px 0;
+-webkit-transition: padding 0.5s ease-out;
+transition: padding 0.5s ease-out;
+}
+
+
+#main-nav .navbar-header {
+margin-top: 15px;
 }
 
 
 #main-nav .navbar-brand {
 display: inline-block;
-margin-left: 10px;
+margin-left: 20px;
+padding: 5px;
 }
 
 
-#main-nav .navbar-brand img{
+#main-nav .navbar-brand img {
 margin-top: -3px;
 border: 2px solid #f28c83;
 margin-right: 10px;
 width: 45px;
-height: 48px;
+height: 45px;
+line-height: 45px;
 border-radius: 50%;
 }
 
 
-#main-nav .navbar-brand span{
+#main-nav .navbar-brand span {
 font-size: 20px;
 font-weight: 700;
 color: #f28c83;
@@ -152,29 +158,47 @@ text-transform: uppercase;
 
 
 /* bootstrap class */
-.navbar-right {  
-  margin-top: 10px;  
+.navbar-right {
+margin-top: 10px;  
 }
 
+
 #main-nav li {
+text-align: center;
 background: transparent;
 margin: 0 10px;
 border: 2px solid transparent;
 }
 
 
+/* menu for small screens */
+#main-nav .navbar-toggle .icon-bar {
+width: 28px;
+height: 4px;
+margin-top: 0;
+margin-right: -20px;
+background: #6d6d6d !important;
+}
+
+
+#main-nav .navbar-toggle .icon-bar + .icon-bar { 
+margin-top: 4px;
+}
+
+
+
 /*----------------------------
 ---- Header Styles ----
 -----------------------------*/
 
-#home {
+#home { 
 max-width: 100%;
-position: relative;              
+position: relative; 
 }
 
 
 #home .intro {
-margin-top: 0;
+margin-top: 0px;
 position: absolute;
 margin-top: auto;
 color: #fff;
@@ -182,25 +206,25 @@ color: #fff;
 
 
 #home .intro h1 { 
-  font-size: 16px;
-  margin-top: 25px;
-  width: 100%; 
+font-size: 16px;
+margin-top: 25px;
+width: 100%; 
 }
 
 
-#home .intro h3 {
+#home .intro h3 { 
 font-size: 12px;  
 }
 
 
-#home .intro h1, h3 {
-font-weight: bold; 
+#home .intro h1, h3 { 
+font-weight: bold;
 }
 
 
 #home img {
-margin-top: 70px;
-width: 100%;
+margin-top: 70px; 
+width: 100%; 
 }
 
 
@@ -292,18 +316,33 @@ margin-bottom: 10px;
 }
 
 
-
-/*-----------------------
+/*-----------------------------
 --- Portfolio Styles ----
--------------------------*/
-
+------------------------------*/
 #portfolio {
 padding-top: 70px;
 background: #1F2C37;
-color:#fff;
 /* background:url('../images/bg-portfolio.jpg') no-repeat fixed;
 background-size:cover; */
+color: #fff;
 }
+
+
+.portfolio-item {
+margin-bottom: 15px;
+}
+
+
+.portfolio-item h3 {
+padding: 10px;
+margin-top: 5px;
+/* text-align:center; */
+font-size: 18px;
+font-weight: 400;
+letter-spacing: 0.01em;
+word-spacing: 0.15em;
+}
+
 
 
 /*----------------------

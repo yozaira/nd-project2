@@ -18,14 +18,6 @@
     Fonts
     =============================================== -->
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,200,500,600,700' rel='stylesheet' type='text/css'>
-    <!-- ==============================================     
-    JS
-    =============================================== -->
-    <script src="js/jquery.js"></script>
-    <!--  helper.js  -->
-    <script src="js/helper.js"></script>
-    <!--Uncomment the <script> tag below when you're ready to add an interactive Google Map to your resume!-->
-    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script> 
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->  
     <!--[if lt IE 9]>
@@ -35,32 +27,32 @@
   </head>
   <body>
     <div class="wrapper">
-    <!-- ==============================================
-    MAIN NAV
-    =============================================== -->
-      <div id="main-nav" class="navbar navbar-fixed-top">
+      <!-- ==============================================
+      MAIN NAV
+      =============================================== -->
+      <div  role="navigation" id="main-nav" class="navbar navbar-fixed-top">
         <div class="container">
-          <div class="navbar-header">     
+
+          <div class="navbar-header"> 
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#site-nav">
-              <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+             <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
             </button>       
             <!-- ======= LOGO ========-->
-            <!--image -->
             <div class="navbar-brand">
               <a><img src="images/navPic.jpg" alt=""/></a>
               <span>Yozie Rojas</span>           
             </div>
+          </div>
 
-            <div id="site-nav" class="navbar-collapse collapse">
-              <ul class="nav navbar-nav navbar-right">
-                <li class="sr-only"><a href="#home" class="scrollto">Home</a></li>
-                <li><a href="#services" class="scrollto">What I Do</a></li>
-                <li><a href="#about" class="scrollto">About Me</a></li>
-                <li><a href="#portfolio" class="scrollto">My Works</a></li>
-                <li><a href="#contact" class="scrollto">Contact Me</a></li>
-              </ul>
-            </div><!-- #end navbar-collapse -->     
-          </div><!--#end nav-header -->   
+          <div id="site-nav" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#home" class="scrollto">Home</a></li>
+              <li><a href="#services" class="scrollto">What I Do</a></li>
+              <li><a href="#about" class="scrollto">About Me</a></li>
+              <li><a href="#portfolio" class="scrollto">My Works</a></li>
+              <li><a href="#contact" class="scrollto">Contact Me</a></li>
+            </ul>
+          </div><!-- #end navbar-collapse -->     
         </div><!--#end nav container -->
       </div><!--#end navbar-fixed-top -->
 
@@ -205,11 +197,16 @@
       </footer>   
 
     </div><!-- #end wrapper -->
+    <!-- ==============================================     
+    JS
+    =============================================== -->
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+    <!-- Google Map -->
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script src='js/bootstrap.min.js'></script>
+    <!--In resumeBuilder.js writes the code that builds the resume dynamically when this website, index.html, is opened.--> 
+    <script src="js/resumeBuilder.js"></script>   
 
-    <!--The next line tells the browser where to download the JavaScript file you'll be
-    writing. In resumeBuilder.js, you'll be writing code that builds the resume
-    dynamically when this website, index.html, is opened.--> 
-    <script src="js/resumeBuilder.js"></script>
 
     <script type="text/javascript">
 

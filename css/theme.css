@@ -505,6 +505,7 @@ I started working on small screens first, and continue adjustng until desktop si
 @media only screen and (min-width: 200px)  and (max-width: 320px) { 
 
   /* #main-nav { background: pink;  } */
+
   #main-nav .navbar-brand span { 
   font-size: 18px;  
   } 
@@ -571,6 +572,7 @@ I started working on small screens first, and continue adjustng until desktop si
 @media only screen and (min-width: 321px)  and (max-width: 480px) {  /*  default  style -  portrait viewport 320 x 480*/
  
   /* #main-nav{ background: green;  } */
+
   #home .intro {
   margin-top: 90px;
   }
@@ -586,6 +588,7 @@ I started working on small screens first, and continue adjustng until desktop si
   @media only screen and (min-width: 481px) and (max-width: 620px) { 
 
   /* #main-nav{ background: blue;  } */
+
   #home .intro {
   margin-top: 110px;
   }
@@ -625,6 +628,7 @@ I started working on small screens first, and continue adjustng until desktop si
 @media only screen and (min-width: 621px) and (max-width: 767px) {  
   
   /* #main-nav{ background: pink;  } */
+
   #home .intro {  
   margin-top: 125px;  
   }
